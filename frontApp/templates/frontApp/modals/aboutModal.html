@@ -1,0 +1,47 @@
+<!-- Modal -->
+{% load static %}
+
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModalLabel">About Yobu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active hand-pointer" aria-current="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hand-pointer">Credits</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-pane">
+                        <img src="{{APP_ICON_PATH}}" class="bi me-2"> 
+                        <p class="small mt-3">{{APP_NAME}} App <span class="badge bg-primary small">Beta</span></p> 
+                        <p class="small mt-3">Zemini Platform is a platform brought to you to help you share a video session allowing you and your friends to watch a given video previously shared amoung you simultaneously </p>
+                    </div>
+                    <div class="card-body-pane text-center d-none">
+                        <img src="{{APP_ICON_PATH}}" class="bi me-2"> 
+                        <p class="small mt-3">{{APP_NAME}} App <span class="badge bg-primary">Beta</span></p> 
+                        <p class="small mt-3">Created By <a> Tafsir GNA </a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="{% static 'frontApp/js/aboutModal.js' %}"></script> 

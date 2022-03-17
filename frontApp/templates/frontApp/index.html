@@ -1,5 +1,7 @@
 {% extends "frontApp/base.html" %}
 
+{% load static %}
+
 {% block body %}
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="check" viewBox="0 0 16 16">
@@ -12,7 +14,7 @@
     {% include 'frontApp/header.html' %}
 
     <main>
-      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <!-- <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
@@ -64,63 +66,125 @@
             </div>
           </div>
         </div>
+      </div> -->
+
+      <!-- 
+
+      <div>
+        <hr/>
+        <h5>Screenshots</h5>
       </div>
 
-      <h2 class="display-6 text-center mb-4">Compare plans</h2>
+      <div>
+        <hr/>
+        <h5>Information</h5>
+      </div> -->
 
-      <div class="table-responsive">
-        <table class="table text-center">
-          <thead>
-            <tr>
-              <th style="width: 34%;"></th>
-              <th style="width: 22%;">Free</th>
-              <th style="width: 22%;">Pro</th>
-              <th style="width: 22%;">Enterprise</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" class="text-start">Public</th>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            </tr>
-            <tr>
-              <th scope="row" class="text-start">Private</th>
-              <td></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            </tr>
-          </tbody>
+      <div class="mb-5">
+        <hr/>
+        <h5 class="mb-4">Screenshots</h5>
+        <div class="row">
 
-          <tbody>
-            <tr>
-              <th scope="row" class="text-start">Permissions</th>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            </tr>
-            <tr>
-              <th scope="row" class="text-start">Sharing</th>
-              <td></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            </tr>
-            <tr>
-              <th scope="row" class="text-start">Unlimited members</th>
-              <td></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            </tr>
-            <tr>
-              <th scope="row" class="text-start">Extra security</th>
-              <td></td>
-              <td></td>
-              <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="card col mx-2">
+            <div class="card-body">
+              <img src="{% static 'frontApp/img/Screenshot_a.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+
+          <div class="card col mx-2">
+            <div class="card-body">
+              <img src="{% static 'frontApp/img/Screenshot_b.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+
+          <div class="card col mx-2">
+            <div class="card-body">
+              <img src="{% static 'frontApp/img/Screenshot_c.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+
+          <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" height="200em">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'frontApp/img/Screenshot_a.jpg' %}" class="d-block w-100" alt="..." height="300em" width="100em">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'frontApp/img/Screenshot_b.jpg' %}" class="d-block w-100" alt="..." height="300em" width="100em">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'frontApp/img/Screenshot_c.jpg' %}" class="d-block w-100" alt="..." height="300em" width="100em">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> -->
+
+        </div>
       </div>
+
+      <div class="mb-5">
+        <hr/>
+        <h5 class="mb-4">Use Cases</h5>
+        <div>
+
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <hr/>
+        <h5 class="mb-4">Features</h5>
+        <div>
+
+          <ul class="icon-list">
+            <li>Bootstrap quick start guide</li>
+            <li>Bootstrap Webpack guide</li>
+            <li>Bootstrap Parcel guide</li>
+            <li>Contributing to Bootstrap</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <hr/>
+        <h5 class="mb-4">Other Apps</h5>
+        <div>
+          {% for key, data in OTHER_APPS.items %}
+            <div class="card border-secondary mb-3 shadow" style="max-width: 18rem;">
+              <!-- <div class="card-header">{{key}}</div> -->
+              <div class="card-body text-secondary">
+                <h5 class="card-title"><img class="mb-2 me-2" src="{{data.logo_path}}" alt="" width="40" height="40">{{key}}</h5>
+                <p class="card-text small">{{data.description}}</p>
+                <a class="btn btn-outline-primary btn-sm" href="{{data.app_url}}">Visit</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
     </main>
 
     {% include 'frontApp/footer.html' %}
